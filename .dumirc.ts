@@ -12,6 +12,7 @@ export default defineConfig({
   outputPath: 'docs-dist',
   styles: ['.dumi-default-header-left { width: 250px !important; }'],
   base: '/salita-components/',
+  publicPath: '/salita-components/',
   themeConfig: {
     name: 'salita-components',
     nav: [],
