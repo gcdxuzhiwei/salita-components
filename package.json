@@ -2,7 +2,15 @@
   "name": "salita-components",
   "version": "0.0.1",
   "description": "A react library developed with dumi",
+  "keywords": [
+    "watermark",
+    "word cloud"
+  ],
   "homepage": "https://gcdxuzhiwei.github.io/salita-components",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gcdxuzhiwei/salita-components.git"
+  },
   "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
