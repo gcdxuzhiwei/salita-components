@@ -1,10 +1,14 @@
 # 基本使用
 
 ```tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Watermark } from 'salita-components';
 
 export default () => {
-  return <Watermark></Watermark>;
+  return (
+    <Watermark content="WatermarkDemo">
+      <div style={{ height: 300 }} />
+    </Watermark>
+  );
 };
 ```
