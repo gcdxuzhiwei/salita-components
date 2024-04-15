@@ -1,13 +1,42 @@
 import { useMemoizedFn } from 'ahooks';
 import type { FC, PropsWithChildren } from 'react';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export interface WatermarkProps extends PropsWithChildren {
+  /**
+   * @description  水印文字内容
+   */
   content: string;
+  /**
+   * @default rgba(0,0,0,.15)
+   * @description  字体颜色
+   */
   color?: string;
+  /**
+   * @default normal normal normal 16px sans-serif
+   * @description  文字样式
+   */
   font?: string;
+  /**
+   * @default -22
+   * @description  水印绘制时，旋转的角度，单位 °
+   */
   rotate?: number;
+  /**
+   * @default [100, 100]
+   * @description  水印之间的间距
+   */
   gap?: [number, number];
+  /**
+   * @default [0,0]
+   * @description  水印距离容器左上角的偏移量
+   */
+  offset?: [number, number];
+  /**
+   * @default 9
+   * @description  追加的水印元素的 z-index
+   */
+  zIndex?: number;
 }
 
 const Watermark: FC<WatermarkProps> = (props) => {
@@ -17,10 +46,11 @@ const Watermark: FC<WatermarkProps> = (props) => {
     font = 'normal normal normal 16px sans-serif',
     rotate = -22,
     gap = [100, 100],
+    offset = [0, 0],
+    zIndex = 9,
     children,
   } = props;
 
-  const dom = useRef(null);
   const [bgUrl, setBgUrl] = useState('');
 
   const getImage = useMemoizedFn(() => {
@@ -64,7 +94,7 @@ const Watermark: FC<WatermarkProps> = (props) => {
   }, [content, color, font, rotate, gap]);
 
   return (
-    <div ref={dom} style={{ position: 'relative' }}>
+    <div style={{ position: 'relative' }}>
       {bgUrl && (
         <div
           style={{
@@ -75,6 +105,9 @@ const Watermark: FC<WatermarkProps> = (props) => {
             height: '100%',
             backgroundImage: `url(${bgUrl})`,
             backgroundRepeat: 'repeat',
+            zIndex,
+            pointerEvents: 'none',
+            backgroundPosition: `${offset[0]}px ${offset[1]}px`,
           }}
         />
       )}

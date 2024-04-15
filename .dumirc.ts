@@ -13,6 +13,10 @@ export default defineConfig({
   styles: ['.dumi-default-header-left { width: 250px !important; }'],
   base: '/salita-components/',
   publicPath: '/salita-components/',
+  apiParser: {},
+  resolve: {
+    entryFile: './src/index.ts',
+  },
   themeConfig: {
     name: 'salita-components',
     nav: [],
