@@ -8,12 +8,12 @@ export interface WatermarkProps extends PropsWithChildren {
    */
   content: string;
   /**
-   * @default rgba(0,0,0,.15)
+   * @default "rgba(0,0,0,.15)"
    * @description  字体颜色
    */
   color?: string;
   /**
-   * @default normal normal normal 16px sans-serif
+   * @default "normal normal normal 16px sans-serif"
    * @description  文字样式
    */
   font?: string;

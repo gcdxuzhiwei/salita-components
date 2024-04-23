@@ -9,7 +9,7 @@ export interface DragListProps {
    */
   handleSelector?: string;
   /**
-   * @default tr
+   * @default "tr"
    * @description  支持拖拽的节点选择器
    */
   nodeSelector?: string;
