@@ -1,6 +1,6 @@
 import { useMemoizedFn } from 'ahooks';
 import type { FC, PropsWithChildren } from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 
 export interface WatermarkProps extends PropsWithChildren {
   /**
@@ -116,4 +116,4 @@ const Watermark: FC<WatermarkProps> = (props) => {
   );
 };
 
-export default Watermark;
+export default memo(Watermark);
