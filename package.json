@@ -54,15 +54,11 @@
     ]
   },
   "dependencies": {
-    "ahooks": "^3.7.11",
-    "classnames": "^2.5.1",
-    "lodash": "^4.17.21",
-    "react-resize-detector": "^10.0.1"
+    "ahooks": "^3.7.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
-    "@types/lodash": "^4.17.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
