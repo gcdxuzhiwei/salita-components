@@ -1,11 +1,11 @@
 {
   "name": "salita-components",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A react library developed with dumi",
   "keywords": [
     "watermark",
-    "word cloud",
-    "drag list"
+    "drag list",
+    "react"
   ],
   "homepage": "https://gcdxuzhiwei.github.io/salita-components",
   "repository": {

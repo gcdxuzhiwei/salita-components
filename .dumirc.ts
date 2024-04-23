@@ -5,7 +5,6 @@ const routers = [
   { title: '使用说明', link: '/' },
   { title: '水印', link: '/watermark' },
   { title: '拖拽排序', link: '/drag-list' },
-  { title: '词云', link: '/word-cloud' },
 ];
 
 export default defineConfig({
